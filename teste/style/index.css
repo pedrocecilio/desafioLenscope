@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(4,17,131,1) 28%, rgba(0,0,0,1) 100%);
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(203,205,223,0.577468487394958) 28%, rgba(255,255,255,0.4234068627450981) 100%);
+    padding: 25px 30px ;
+    border-radius: 5px;
+}
+.title{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(185deg, rgba(0,0,0,1) 31%, rgba(62,62,62,1) 100%);
+}
+.container form .details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% /2 - 20px);
+}
+.details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.details .input-box input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.1s ease;
+}
+.details .input-box input:focus,
+.details .input-box input:valid{
+    border-color: #9b59b6
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer {
+    font-size: 24px;
+    color: #fff;
+}
+
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .details .input-box{
+        margin-bottom: 15px;
+        width: 100%
+    }
+    .container form .details{
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+    .details::-webkit-scrollbar{
+        width: 0;
+    }
+}
